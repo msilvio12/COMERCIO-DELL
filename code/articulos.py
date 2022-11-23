@@ -3,6 +3,9 @@ import os
 import sys
 import sqlite3
 
+
+
+
 opcion=0
 def agregar_producto():
     os.system("cls")
@@ -12,7 +15,7 @@ def agregar_producto():
     nombre= input("DIGITE EL NOMBRE DEL PRODUCTO: ")
     precio=input("DIGITE EL PRECIO DEL PRODUCTO: ")
 
-    con= sqlite3.connect("articulos.s3db")
+    con= sqlite3.connect("articulos.sql")
     cursor= con.cursor()
     cursor.execute("insert into articulos(nombre,precio) values('"+nombre+"', '"+precio+"')")
     con.close()
